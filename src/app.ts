@@ -4,9 +4,12 @@ import userController from "./controllers/userController";
 import adminController from "./controllers/adminController";
 import votesController from "./controllers/votesController";
 import candidateController from "./controllers/candidateController";
+import connectDB from "./config/db";
 
 const port = process.env.PORT || 2224
 const app = express();
+
+connectDB()
 
 app.use(express.json())
 
