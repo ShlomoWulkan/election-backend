@@ -1,5 +1,9 @@
-import e, { Router } from "express";
+import { Router } from "express";
+import { vote } from "../routes/voteRoute";
+import verifyUser from "../middlewares/verifyUser";
 
 const router = Router();
 
-export default router
+router.post("/", verifyUser, vote);
+
+export default router;

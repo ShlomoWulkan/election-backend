@@ -6,3 +6,7 @@ export interface LoginDTO {
 export interface registerDTO extends LoginDTO {
     isAdmin: boolean
 }
+
+export interface ProfileDto {
+    id:string
+}

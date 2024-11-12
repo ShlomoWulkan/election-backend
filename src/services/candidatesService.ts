@@ -1,3 +1,4 @@
+import e from "express";
 import candidateModel from "../models/candidateModel";
 
 export const initDatabase = async () => {
@@ -32,4 +33,14 @@ export const initDatabase = async () => {
     } catch (err) {
         console.log("error",err)
     }
-}
+};
+
+export const getCandidatesList = async () => {
+    try {
+        const candidates = await candidateModel.find({})
+        return candidates
+    } catch (err) {
+        console.log("error",err)
+        throw new Error("Could not get candidates")
+    }
+};
