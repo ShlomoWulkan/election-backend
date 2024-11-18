@@ -8,7 +8,7 @@ import connectDB from "./config/db";
 import cors from "cors"
 import http from "http";
 import { Server } from "socket.io";
-import { handleSocketConnection } from "./cockets/io";
+import { handleSocketConnection } from "./socket/io";
 
 const port = process.env.PORT || 2224
 const app = express();
